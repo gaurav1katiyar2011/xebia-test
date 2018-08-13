@@ -32,7 +32,7 @@ class HomePage extends React.Component {
         }
         else
         {
-            if(this.state.counter>15)
+            if(this.state.counter>14)
             {
                 this.setState({isSearchEnable: false})
                 alert("You can make only 15-Searches in a minute. Don't worry, just wait for some moment to enable search again!!");
@@ -58,7 +58,7 @@ class HomePage extends React.Component {
     }
     componentDidMount(){
         setTimeout(()=>{this.setState({isSearchEnable: true,
-            counter:0})},900000)
+            counter:0})},60000)
     }
 
     render() {
